@@ -11,7 +11,7 @@
      var slideShowTotalWidthProc = imagesNum * 100 + "%";
 
      var currentList = $(".slideshow-inner>ul");
-     var currentItem = $(".slideshow-inner>ul").css('width', slideShowTotalWidthProc);
+     //var currentItem = $(".slideshow-inner>ul").css('width', slideShowTotalWidthProc);
      var imagesArray = [];
 
      var choosenThumb;
@@ -224,14 +224,14 @@
 
     if (isSlideShowItem) {
 
-        responseSilde();
+        //responseSilde();
 
-        createThumbnails();
+        //createThumbnails();
         startSlideshow();
-        closeSlider();
-        showThumbnails();
-        chooseThumbnails();
-        zoomIn();
+        //closeSlider();
+        //showThumbnails();
+        //chooseThumbnails();
+        //zoomIn();
 
         controlClick(".arrow-left", ".arrow-right", -100, -maxDisplacement, -maxDisplacement, 2);
         controlClick(".arrow-right", ".arrow-left", 100, 0, maxDisplacement, 0);

@@ -149,7 +149,10 @@ $(document).ready(function() {
         createThumbnails();
         showThumbnails();
 
-        //$("zoom-label").addClass('zoom-in');
+        $(".image-wrapper").on("click",function() {
+            $(".slideshow-slider").toggleClass('zoom-in');
+        })
+        
 
 
         var pinLeft = ($(".slideshow-zoom").width())/2 + (slideShowImage.width())/4;

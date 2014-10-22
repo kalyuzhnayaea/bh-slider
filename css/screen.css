@@ -403,7 +403,7 @@ body {
 }
 
 /* line 313, ../sass/partials/_base.scss */
-.zoom-in + .slideshow-ad-pannel {
+.zoom-in .slideshow-ad-pannel {
   display: none;
 }
 /* line 316, ../sass/partials/_base.scss */
@@ -413,6 +413,39 @@ body {
 /* line 319, ../sass/partials/_base.scss */
 .zoom-in .slideshow-description {
   display: none;
+}
+/* line 322, ../sass/partials/_base.scss */
+.zoom-in .slideshow-modal {
+  padding: 0;
+}
+/* line 325, ../sass/partials/_base.scss */
+.zoom-in .slideshow-wrap {
+  padding: 0;
+}
+/* line 328, ../sass/partials/_base.scss */
+.zoom-in .slideshow-zoom {
+  padding: 0;
+  width: 100%;
+}
+/* line 331, ../sass/partials/_base.scss */
+.zoom-in .slideshow-zoom img {
+  height: 92%;
+  -webkit-transition-property: height;
+  -moz-transition-property: height;
+  -o-transition-property: height;
+  transition-property: height;
+  -webkit-transition-duration: 0.6s;
+  -moz-transition-duration: 0.6s;
+  -o-transition-duration: 0.6s;
+  transition-duration: 0.6s;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+/* line 338, ../sass/partials/_base.scss */
+.zoom-in .slideshow-zoom li:hover {
+  cursor: url("../img/icon/zoom-out.png"), default;
 }
 
 /* line 2, ../sass/partials/_slideshow.scss */

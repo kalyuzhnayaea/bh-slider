@@ -310,7 +310,7 @@ body {
 }
 
 .zoom-in {
-    +.slideshow-ad-pannel {
+    .slideshow-ad-pannel {
         display: none;
     }
     .slideshow-footer {
@@ -318,6 +318,27 @@ body {
     }
     .slideshow-description {
         display: none;
+    }
+    .slideshow-modal {
+        padding: 0;
+    }
+    .slideshow-wrap {
+        padding: 0;
+    }
+    .slideshow-zoom {
+        padding: 0;
+        width: 100%;
+        img {
+            height: 92%;
+            @include transition-property(height);
+            @include transition-duration(.6s);
+            @include transition-timing-function(ease-in);
+        }
+        li {
+            &:hover {
+                cursor: url('../img/icon/zoom-out.png'), default;
+            }
+        }
     }
 }
 

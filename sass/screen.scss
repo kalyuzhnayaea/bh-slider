@@ -9,14 +9,16 @@
 
 @import "compass/utilities/sprites";
 
-$icons-arrow-left-spacing: 10px;
-$icons-position: 100%;
-$icons-layout: smart;
-$icons-spacing: 4px !default;
+$icon-arrow-left-spacing: 10px;
+$icon-position: 100%;
+$icon-layout: smart;
+$icon-spacing: 4px !default;
 
-@import "icons/*.png";
-@include all-icons-sprites;
+
+@import "icon/*.png";
+@include all-icon-sprites;
 
 
 @import "partials/base";
 @import "partials/slideshow";
+@import "partials/fontello";

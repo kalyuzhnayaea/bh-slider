@@ -678,10 +678,10 @@ body {
 /* line 335, ../sass/partials/_slideshow.scss */
 .slideshow-paging {
   font-family: Georgia;
-  position: absolute;
+  position: relative;
   z-index: 20;
-  top: 12px;
-  right: 45px;
+  top: 4px;
+  float: right;
   padding: 2px 18px;
   text-align: center;
   color: white;
@@ -775,7 +775,7 @@ body {
 /* line 442, ../sass/partials/_slideshow.scss */
 .social-pannel-bottom {
   position: absolute;
-  z-index: 600000;
+  z-index: 5999951;
   bottom: 0;
   width: 100%;
   overflow: hidden;

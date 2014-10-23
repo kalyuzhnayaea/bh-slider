@@ -335,10 +335,10 @@
 {
     font-family: Georgia;
 
-    position: absolute;
+    position: relative;
     z-index: 20;
-    top: 12px;
-    right: 45px;
+    top: 4px;
+    float: right;
 
     padding: 2px 18px;
 
@@ -441,7 +441,7 @@
 .social-pannel-bottom
 {
     position: absolute;
-    z-index: 600000;
+    z-index: 5999951;
     bottom: 0;
     width: 100%;
     overflow: hidden;

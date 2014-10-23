@@ -833,15 +833,31 @@ body {
     display: none;
   }
 }
-/* line 494, ../sass/partials/_slideshow.scss */
+@media only screen and (max-width: 599px) {
+  /* line 484, ../sass/partials/_slideshow.scss */
+  .social-pannel-bottom.active .social-block {
+    font-size: 1.4em;
+  }
+  /* line 495, ../sass/partials/_slideshow.scss */
+  .social-pannel-bottom.active .social-block .social-item {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 599px) {
+  /* line 500, ../sass/partials/_slideshow.scss */
+  .social-pannel-bottom.active .social-block .social-label {
+    display: none;
+  }
+}
+/* line 509, ../sass/partials/_slideshow.scss */
 .social-pannel-bottom .social-block {
   display: none;
 }
-/* line 498, ../sass/partials/_slideshow.scss */
+/* line 513, ../sass/partials/_slideshow.scss */
 .social-pannel-bottom .menu {
   text-align: center;
 }
-/* line 502, ../sass/partials/_slideshow.scss */
+/* line 517, ../sass/partials/_slideshow.scss */
 .social-pannel-bottom .social-item {
   display: inline-block;
   float: none;
@@ -850,18 +866,18 @@ body {
   text-align: center;
   vertical-align: top;
 }
-/* line 514, ../sass/partials/_slideshow.scss */
+/* line 529, ../sass/partials/_slideshow.scss */
 .social-pannel-bottom .social-item .social-icon:hover {
   font-size: 1em;
 }
-/* line 519, ../sass/partials/_slideshow.scss */
+/* line 534, ../sass/partials/_slideshow.scss */
 .social-pannel-bottom .social-item .hi-icon {
   line-height: 28;
   width: 30px;
   height: 30px;
 }
 
-/* line 530, ../sass/partials/_slideshow.scss */
+/* line 545, ../sass/partials/_slideshow.scss */
 .slideshow-description {
   position: relative;
   float: right;
@@ -874,31 +890,31 @@ body {
   box-sizing: border-box;
 }
 @media only screen and (max-width: 989px) {
-  /* line 530, ../sass/partials/_slideshow.scss */
+  /* line 545, ../sass/partials/_slideshow.scss */
   .slideshow-description {
     display: none;
   }
 }
 
-/* line 550, ../sass/partials/_slideshow.scss */
+/* line 565, ../sass/partials/_slideshow.scss */
 .slide-info h2 {
   font-size: 20px;
   line-height: 1.2em;
   padding: 15px;
   color: white;
 }
-/* line 559, ../sass/partials/_slideshow.scss */
+/* line 574, ../sass/partials/_slideshow.scss */
 .slide-info p {
   padding: 10px 20px;
   color: white;
 }
 
-/* line 568, ../sass/partials/_slideshow.scss */
+/* line 583, ../sass/partials/_slideshow.scss */
 .description .description-text {
   display: none;
 }
 
-/* line 573, ../sass/partials/_slideshow.scss */
+/* line 588, ../sass/partials/_slideshow.scss */
 .pin-wrapper {
   position: absolute;
   right: 0;
@@ -910,7 +926,7 @@ body {
   margin: auto;
   cursor: pointer;
 }
-/* line 587, ../sass/partials/_slideshow.scss */
+/* line 602, ../sass/partials/_slideshow.scss */
 .pin-wrapper a {
   position: absolute;
   bottom: -54px;
@@ -933,37 +949,37 @@ body {
   -o-transition-timing-function: cubic-bezier(0.5, -0.5, 0.5, 1.5);
   transition-timing-function: cubic-bezier(0.5, -0.5, 0.5, 1.5);
 }
-/* line 604, ../sass/partials/_slideshow.scss */
+/* line 619, ../sass/partials/_slideshow.scss */
 .pin-wrapper a:hover {
   background-position: 0 -100%;
 }
 
-/* line 612, ../sass/partials/_slideshow.scss */
+/* line 627, ../sass/partials/_slideshow.scss */
 .zoom-in .slideshow-ad-pannel {
   display: none;
 }
-/* line 616, ../sass/partials/_slideshow.scss */
+/* line 631, ../sass/partials/_slideshow.scss */
 .zoom-in .slideshow-footer {
   display: none;
 }
-/* line 620, ../sass/partials/_slideshow.scss */
+/* line 635, ../sass/partials/_slideshow.scss */
 .zoom-in .slideshow-description {
   display: none;
 }
-/* line 624, ../sass/partials/_slideshow.scss */
+/* line 639, ../sass/partials/_slideshow.scss */
 .zoom-in .slideshow-modal {
   padding: 0;
 }
-/* line 628, ../sass/partials/_slideshow.scss */
+/* line 643, ../sass/partials/_slideshow.scss */
 .zoom-in .slideshow-wrap {
   padding: 0;
 }
-/* line 632, ../sass/partials/_slideshow.scss */
+/* line 647, ../sass/partials/_slideshow.scss */
 .zoom-in .slideshow-zoom {
   width: 100%;
   padding: 0;
 }
-/* line 636, ../sass/partials/_slideshow.scss */
+/* line 651, ../sass/partials/_slideshow.scss */
 .zoom-in .slideshow-zoom img {
   height: 92%;
   -webkit-transition-property: height;
@@ -979,7 +995,7 @@ body {
   -o-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
 }
-/* line 646, ../sass/partials/_slideshow.scss */
+/* line 661, ../sass/partials/_slideshow.scss */
 .zoom-in .slideshow-zoom li.hovered {
   cursor: url("../img/icon/zoom-out.png"), default;
 }

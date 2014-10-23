@@ -488,6 +488,21 @@
             {
                 display: none;
             }
+            @include respond-to(mobile-landscape-and-below)
+            {
+                font-size: 1.4em;
+                .social-item
+                {
+                    padding: 0;
+                }
+            }
+            .social-label
+            {
+                @include respond-to(mobile-landscape-and-below)
+                {
+                    display: none;
+                }
+            }
         }
     }
     .social-block

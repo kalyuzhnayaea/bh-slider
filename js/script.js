@@ -14,15 +14,15 @@ $(document).ready(function() {
     var slideShowImage = $(".slideshow-wrap li img");
 
 
-    var imagesNum = currSlideShowItem.length;  /* Общее число img в слайдере */
+    var imagesNum = currSlideShowItem.length; /* Общее число img в слайдере */
 
-    var isSlideShowItem = (slideShowImage).attr(imageSrc);  /* Существование изображений в слайдере */
+    var isSlideShowItem = (slideShowImage).attr(imageSrc); /* Существование изображений в слайдере */
 
     var slideDescription = $("li .description-text").each(function(i) { /* Собирает все описания под картинкой в массив */
         $(this).html();
     });
 
-    var imagesArray = [];   /* Собирает все пути src в массив */
+    var imagesArray = []; /* Собирает все пути src в массив */
 
     $(slideShowImage).each(function() {
         imagesArray.push($(this).attr(imageSrc));
@@ -37,15 +37,15 @@ $(document).ready(function() {
             $(".wrapper").addClass('wrapper-hide');
             $(".slideshow-slider").addClass('slideshow-slider-show');
 
-            showDescription(1);
+            showDescription(i);
 
         });
     }
-    var showDescription = function(slideNum) {
+    var showDescription = function(i) {
         slideshowimagesNum.text('');
         slideInfo.text('');
-        slideshowimagesNum.prepend(1 + '/' + imagesNum);
-        slideInfo.prepend(slideDescription[slideNum - 1]);
+        slideshowimagesNum.prepend(i+1 + '/' + imagesNum);
+        slideInfo.prepend(slideDescription[i ]);
     }
 
     var controlClickRight = function() {
@@ -54,24 +54,24 @@ $(document).ready(function() {
         var slideShowList = $(".slideshow-inner>ul");
 
         i = 0;
-        
+
         $(".arrow-right").on("click", function() {
-            
+
             if (i <= imagesNum) {
-               $(slideShowList).find('img').attr('src', imagesArray[i]);
-               $(".arrow-left").show();
-                showDescription(i); 
+                $(slideShowList).find('img').attr('src', imagesArray[i]);
+                $(".arrow-left").show();
+                showDescription(i);
                 if (i == imagesNum) {
-                   $(".arrow-right").hide(); 
-                } 
-            } 
+                    $(".arrow-right").hide();
+                }
+            }
             ++i;
-            return function(){
-                
+            return function() {
+
                 return i;
             }
 
-         });
+        });
     }
 
     var controlClickLeft = function() {
@@ -79,19 +79,19 @@ $(document).ready(function() {
         var slideShowInner = $(".slideshow-inner");
         var slideShowList = $(".slideshow-inner>ul");
 
-        
+
         $(".arrow-left").on("click", function() {
 
             if (i <= imagesNum) {
-               $(slideShowList).find('img').attr('src', imagesArray[i]);
-               $(".arrow-left").show();
-                showDescription(i); 
+                $(slideShowList).find('img').attr('src', imagesArray[i]);
+                $(".arrow-left").show();
+                showDescription(i);
                 if (i == imagesNum) {
-                   $(".arrow-right").hide(); 
+                    $(".arrow-right").hide();
                 }
-            } 
-            return function(){
-                
+            }
+            return function() {
+
                 return i;
             }
 
@@ -101,7 +101,7 @@ $(document).ready(function() {
 
     var showThumbnails = function() {
 
-        $('#thumbnails-button').click(function(event) {
+        $('.thumbnails-button').click(function(event) {
 
             $(".slideshow-thumbnails").addClass('slideshow-thumbnails-show');
             $(".slideshow-zoom,.slideshow-description").addClass('blur');
@@ -149,23 +149,33 @@ $(document).ready(function() {
         createThumbnails();
         showThumbnails();
 
-        $(".image-wrapper").on("click",function() {
+        // Zooming function
+
+        $(".image-wrapper").on("click", function() {
             $(".slideshow-slider").toggleClass('zoom-in');
         })
-        
+
+        // Hovered function
+
+        currSlideShowItem.hover(function(event) {
+
+            $(this).addClass('hovered');
+            event.stopPropagation();
+
+            return false;
+
+        }, function(event) {
+
+            $(this).removeClass('hovered');
+            event.stopPropagation();
+
+            return false;
+        });
 
 
-        var pinLeft = ($(".slideshow-zoom").width())/2 + (slideShowImage.width())/4;
+} else alert("Фотографии еще не загружены!");
 
-        
-        $(".pin-wrapper").css('left',pinLeft);
 
-        $(window).resize(function() {
-            var pinLeft = ($(".slideshow-wrap").width())/2 +(slideShowImage.width())/2 - 56 ;
-            $(".pin-wrapper").css('left',pinLeft);
-        })
-
-    } else alert("Фотографии еще не загружены!");
 
 
 

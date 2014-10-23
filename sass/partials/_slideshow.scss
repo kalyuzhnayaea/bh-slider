@@ -84,6 +84,8 @@
     padding-top: 80px;
     padding-bottom: 40px;
 
+    overflow: hidden;
+
     @include box-sizing(border-box);
 }
 .slideshow-zoom
@@ -275,12 +277,12 @@
 {
     opacity: .2;
 
-            filter: blur(20px);
-    -webkit-filter: blur(20px);
-       -moz-filter: blur(20px);
-         -o-filter: blur(20px);
-        -ms-filter: blur(20px);
-            filter: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQoJPGZpbHRlciBpZD0iYmx1ciI+DQoJCTxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjMiIC8+DQoJPC9maWx0ZXI+DQo8L3N2Zz4=#blur');
+    //         filter: blur(20px);
+    // -webkit-filter: blur(20px);
+    //    -moz-filter: blur(20px);
+    //      -o-filter: blur(20px);
+    //     -ms-filter: blur(20px);
+    //         filter: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQoJPGZpbHRlciBpZD0iYmx1ciI+DQoJCTxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjMiIC8+DQoJPC9maWx0ZXI+DQo8L3N2Zz4=#blur');
     //filter: progid: DXImageTransform.Microsoft.Blur(PixelRadius='20');
 }
 .thumb-item
@@ -482,7 +484,10 @@
         float: none;
         text-align: center;
         .social-icon {
-            text-decoration: none;
+            &:hover
+        {
+            font-size: 1em;
+        }
         }
         .hi-icon {
             height: 30px;
@@ -554,7 +559,6 @@
     {
         position: absolute;
         bottom: -54px;
-        //bottom: 0;
         left: 0;
 
         display: block;

@@ -1,4 +1,4 @@
- [class^="icon-"]:before, [class*=" icon-"]:before {
+[class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -31,7 +31,8 @@
  
 .icon-facebook:before { content: '\e800'; } /* '' */
 .icon-twitter:before { content: '\e801'; } /* '' */
+.icon-instagramm:before { content: '\e802'; } /* '' */
 .icon-gplus:before { content: '\e803'; } /* '' */
 .icon-pinterest:before { content: '\e804'; } /* '' */
-.icon-instagramm:before { content: '\e802'; } /* '' */
-.icon-th:before { content: '\e807'; } /* '' */
+.icon-export:before { content: '\e805'; } /* '' */
+.icon-th:before { content: '\e806'; } /* '' */

@@ -106,6 +106,14 @@ $(document).ready(function() {
             $(".slideshow-thumbnails").addClass('slideshow-thumbnails-show');
             $(".slideshow-zoom,.slideshow-description").addClass('blur');
             $(".slideshow-footer").addClass('slideshow-footer-shadow');
+            $(".thuumb-button").toggleClass('slideshow-thumbnails-show');
+
+        });
+         $('.thuumb-button').click(function(event) {
+
+            $(".slideshow-zoom,.slideshow-description").toggleClass('blur');
+            $(".slideshow-footer").toggleClass('slideshow-footer-shadow');
+            $(".slideshow-thumbnails").toggleClass('slideshow-thumbnails-show');
 
         });
     }
@@ -153,6 +161,12 @@ $(document).ready(function() {
 
         $(".image-wrapper").on("click", function() {
             $(".slideshow-slider").toggleClass('zoom-in');
+            $(".social-pannel-bottom").removeClass('active');
+        })
+
+
+        $(".social-button").on("click", function() {
+            $(".social-pannel-bottom").toggleClass('active');
         })
 
         // Hovered function

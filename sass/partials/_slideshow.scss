@@ -12,8 +12,6 @@
     opacity: 0;
     background: $slideshow-bg;
 
-    @include transition-property(opacity);
-    @include transition-duration(.6s);
     &.slideshow-slider-show
     {
         display: block;
@@ -103,9 +101,6 @@
     {
         width: 100%;
     }
-    @include transition-property(width);
-    @include transition-duration(.6s);
-    @include transition-timing-function(ease-in);
 }
 .slideshow-wrapper
 {
@@ -165,11 +160,11 @@
     }
     .arrow-left
     {
-        left: 0;
+        left: 5%;
     }
     .arrow-right
     {
-        right: 0;
+        right: 5%;
     }
 }
 .slideshow-wrap
@@ -446,6 +441,7 @@
 .social-pannel-bottom
 {
     position: absolute;
+    z-index: 600000;
     bottom: 0;
     width: 100%;
     overflow: hidden;

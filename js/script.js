@@ -28,9 +28,8 @@ $(document).ready(function() {
         imagesArray.push($(this).attr(imageSrc));
     });
 
-
-
     var startSlideshow = function() {
+
 
         $('#start-slideshow').on('click', function(event) {
             event.preventDefault();
@@ -39,13 +38,40 @@ $(document).ready(function() {
 
             showDescription(i);
 
+            calculatePinPosition();
+
+            $(window).resize(function() {
+                calculatePinPosition();
+
+            })
+
         });
     }
+
+    var calculatePinPosition = function() {
+        var a = [];
+        var c = [];
+        $(".slideshow-wrap img").each(function() {
+            a.push($(this).css('width'));
+            c.push($(this).css('height'));
+        })
+
+        var zoomWidth = $(".slideshow-zoom").width() * 0.8;
+        var zoomheight = $(".slideshow-zoom").height();
+
+        var wrapperLeft = (zoomWidth - parseInt(a[0])) / 2 + 5;
+        var wrapperBottom = (zoomheight - parseInt(c[0])) / 2;
+
+        $('.pin-wrapper').css('right', wrapperLeft);
+        $('.pin-wrapper').css('bottom', wrapperBottom);
+    }
+
+
     var showDescription = function(i) {
         slideshowimagesNum.text('');
         slideInfo.text('');
-        slideshowimagesNum.prepend(i+1 + '/' + imagesNum);
-        slideInfo.prepend(slideDescription[i ]);
+        slideshowimagesNum.prepend(i + 1 + '/' + imagesNum);
+        slideInfo.prepend(slideDescription[i]);
     }
 
     var controlClickRight = function() {
@@ -84,12 +110,13 @@ $(document).ready(function() {
 
             if (i <= imagesNum) {
                 $(slideShowList).find('img').attr('src', imagesArray[i]);
-                $(".arrow-left").show();
+                $(".arrow-right").show();
                 showDescription(i);
                 if (i == imagesNum) {
-                    $(".arrow-right").hide();
+                    //$(".arrow-left").hide();
                 }
             }
+            --i;
             return function() {
 
                 return i;
@@ -109,7 +136,7 @@ $(document).ready(function() {
             $(".thuumb-button").toggleClass('slideshow-thumbnails-show');
 
         });
-         $('.thuumb-button').click(function(event) {
+        $('.thuumb-button').click(function(event) {
 
             $(".slideshow-zoom,.slideshow-description").toggleClass('blur');
             $(".slideshow-footer").toggleClass('slideshow-footer-shadow');
@@ -162,6 +189,8 @@ $(document).ready(function() {
         $(".image-wrapper").on("click", function() {
             $(".slideshow-slider").toggleClass('zoom-in');
             $(".social-pannel-bottom").removeClass('active');
+
+            calculatePinPosition();
         })
 
 
@@ -187,7 +216,7 @@ $(document).ready(function() {
         });
 
 
-} else alert("Фотографии еще не загружены!");
+    } else alert("Фотографии еще не загружены!");
 
 
 

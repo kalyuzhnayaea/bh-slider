@@ -587,9 +587,8 @@
 .pin-wrapper
 {
     position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    right: 5px;
+    bottom: 5px;
 
     overflow: hidden;
 
@@ -601,7 +600,8 @@
     a
     {
         position: absolute;
-        bottom: -54px;
+        //bottom: -54px;
+        bottom: 0;
         left: 0;
 
         display: block;
@@ -613,8 +613,9 @@
         background-position: 0 0;
 
         @include transition-property(all);
-        @include transition-duration(.9s);
-        @include transition-timing-function(cubic-bezier(.5, -.5, .5, 1.5));
+        @include transition-duration(.6s);
+        @include transition-timing-function(easy-in-out);
+        //@include transition-delay(0s);
         &:hover
         {
             background-position: 0 -100%;

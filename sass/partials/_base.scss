@@ -207,6 +207,11 @@ body
 
     border-left: 1px solid #3d3d3d;
     background: #292929;
+    .menu {
+        height: 100%;
+        max-height: 490px;
+        min-height: 320px;
+    }
     .social-item
     {
         position: relative;
@@ -215,7 +220,7 @@ body
         overflow: hidden;
 
         width: 40px;
-        height: 106px;
+        height: 20%;
         padding: 0;
 
         text-align: center;

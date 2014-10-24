@@ -3,10 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>BeautyHigth</title>
     <meta name="vieport" content="width=device-width,inital-scale=1">
 
     <link rel="stylesheet" type="text/css" href="css/screen.css">
+    <link rel="stylesheet" href="jquery.mCustomScrollbar.min.css">
+
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/script.js"></script>
 </head>
@@ -53,7 +56,16 @@
                                     <div class="description">
                                         <div class="description-text">
                                             <h2>Flower power</h2>
-                                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut</p>
+                                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                                            </p>
                                         </div>
                                     </div>
                                 </li>
@@ -147,22 +159,9 @@
                     <a class="arrows arrow-right arrow-show hi-icon"><i class="icon icon-arrow-right"></i></a>
                     <a class="arrows arrow-left hi-icon"><i class="icon icon-arrow-left"></i></a>
                 </section>
-
-                <aside class="slideshow-description">
-                    <div class="slideshow-thumbnails-info">
-                        <span class="slideshow-paging"></span>
-                        <a href="javascript:void(0);" class="thumbnails-button hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-                            <i class="icon hi-icon icon-th"></i>
-                            <span class="thumbnails-label">Thumbnails</span>
-
-                        </a>
-                    </div>
                     
-                    <div class="slide-info"></div>
-
-                    <div class="slideshow-ad-block">
-                        <img src="" alt="">
-                    </div>
+                <aside class="slideshow-description">
+                    
                     <div class="social-block social-block-left">
 
                         <ul class="menu">
@@ -195,6 +194,23 @@
 
 
                     </div>
+                    
+                    <div class="slide-info"  id="has-scrollbar">
+                        <div class="slideshow-thumbnails-info">
+                        <span class="slideshow-paging"></span>
+                        <a href="javascript:void(0);" class="thumbnails-button hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
+                            <i class="icon hi-icon icon-th"></i>
+                            <span class="thumbnails-label">Thumbnails</span>
+
+                        </a>
+                    </div>
+                    <div class="slide-description"></div>
+                    </div>
+
+                    <div class="slideshow-ad-block">
+                        <img src="" alt="">
+                    </div>
+
                 </aside>
                 <div class="slideshow-thumbnails">
                     <ul class="thumbnails-container"></ul>
@@ -254,6 +270,20 @@
         <!--end slideshow-slider-->
 
     </div>
+        <!-- custom scrollbar plugin -->
+    <script src="jquery.mCustomScrollbar.js"></script>
+    
+    <script>
+        (function($){
+            $(window).load(function(){
+                
+                $("#has-scrollbar").mCustomScrollbar({
+                    theme:"minimal"
+                });
+                
+            });
+        })(jQuery);
+    </script>
 </body>
 
 </html>

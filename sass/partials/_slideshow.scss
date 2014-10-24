@@ -549,7 +549,9 @@
 
     width: 30%;
     height: 100%;
-    padding: 20px 40px 20px 20px;
+    padding: 20px 0 0 20px;
+
+    //overflow: auto;
 
     background: #2f2f2f;
 
@@ -561,6 +563,8 @@
 }
 .slide-info
 {
+    margin: 0 40px 0 0;
+    height: 100%;
     h2
     {
         font-size: 20px;

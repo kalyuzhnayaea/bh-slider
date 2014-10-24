@@ -60,7 +60,7 @@ $(document).ready(function() {
         var zoomheight = $(".slideshow-zoom").height();
 
         var wrapperLeft = (zoomWidth - parseInt(a[0])) / 2 + 5;
-        var wrapperBottom = (zoomheight - parseInt(c[0])) / 2;
+        var wrapperBottom = (zoomheight - parseInt(c[0])) / 2 + 5;
 
         $('.pin-wrapper').css('right', wrapperLeft);
         $('.pin-wrapper').css('bottom', wrapperBottom);
@@ -68,10 +68,11 @@ $(document).ready(function() {
 
 
     var showDescription = function(i) {
+        var slideDescriptionArea = $('.slide-description');
         slideshowimagesNum.text('');
-        slideInfo.text('');
-        slideshowimagesNum.prepend(i + 1 + '/' + imagesNum);
-        slideInfo.prepend(slideDescription[i]);
+        slideInfo.find(slideDescriptionArea).text('');
+        slideshowimagesNum.append(i + 1 + '/' + imagesNum);
+        slideInfo.find(slideDescriptionArea).append(slideDescription[i]);
     }
 
     var controlClickRight = function() {
@@ -92,6 +93,7 @@ $(document).ready(function() {
                 }
             }
             ++i;
+            calculatePinPosition();
             return function() {
 
                 return i;
@@ -107,7 +109,7 @@ $(document).ready(function() {
 
 
         $(".arrow-left").on("click", function() {
-
+            
             if (i <= imagesNum) {
                 $(slideShowList).find('img').attr('src', imagesArray[i]);
                 $(".arrow-right").show();
@@ -117,6 +119,7 @@ $(document).ready(function() {
                 }
             }
             --i;
+            calculatePinPosition();
             return function() {
 
                 return i;
@@ -149,7 +152,7 @@ $(document).ready(function() {
 
         for (var i = 0; i < imagesArray.length; i++) {
             var thisNumber = i + 1;
-            $(".thumbnails-container").append('<li class="thumb-item"><a href="javascript:void(0);" data-number = ' + thisNumber + '><img src="' + imagesArray[i] + '"  alt=""></a></li>');
+            $(".thumbnails-container").prepend('<li class="thumb-item"><a href="javascript:void(0);" data-number = ' + thisNumber + '><img src="' + imagesArray[i] + '"  alt=""></a></li>');
         }
         //slideShowInner.append('<a class="arrows arrow-right"><i class="icon icons-arrow-right"></i></a><a class="arrows arrow-left"><i class="icon icons-arrow-right"></i></a>');
 

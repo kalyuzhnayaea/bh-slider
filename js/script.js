@@ -189,7 +189,7 @@ $(document).ready(function() {
 
         // Zooming function
 
-        $(".image-wrapper").on("click", function() {
+        $(".image-wrapper img").on("click", function() {
             $(".slideshow-slider").toggleClass('zoom-in');
             $(".social-pannel-bottom").removeClass('active');
 
@@ -211,9 +211,9 @@ $(document).ready(function() {
             return false;
 
         }, function(event) {
-
+        event.stopPropagation();
             $(this).removeClass('hovered');
-            event.stopPropagation();
+            
 
             return false;
         });
